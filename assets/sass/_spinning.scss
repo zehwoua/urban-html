@@ -1,0 +1,156 @@
+// Spinning Icons
+// --------------------------
+
+.#{$fa-css-prefix}-spin {
+  -webkit-animation: spin 2s infinite linear;
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+}
+
+@-moz-keyframes spin {
+  0% { -moz-transform: rotate(0deg); }
+  100% { -moz-transform: rotate(359deg); }
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(359deg); }
+}
+@-o-keyframes spin {
+  0% { -o-transform: rotate(0deg); }
+  100% { -o-transform: rotate(359deg); }
+}
+@-ms-keyframes spin {
+  0% { -ms-transform: rotate(0deg); }
+  100% { -ms-transform: rotate(359deg); }
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(359deg); }
+}
+
+
+
+.#{$fa-css-prefix}-beat {
+  -webkit-animation: beat 1.4s infinite linear;
+  -moz-animation: beat 1.4s infinite linear;
+  -o-animation: beat 1.4s infinite linear;
+  animation: beat 1.4s infinite linear;
+}
+
+@-moz-keyframes beat {
+  0% { -moz-transform: scale(0.7); }
+  100% { -moz-transform: scale(1); }
+}
+@-webkit-keyframes beat {
+  0% { -webkit-transform: scale(0.7); }
+  100% { -webkit-transform: scale(1); }
+}
+@-o-keyframes beat {
+  0% { -o-transform: scale(0.7); }
+  100% { -o-transform: scale(1); }
+}
+@-ms-keyframes beat {
+  0% { -ms-transform: scale(0.7); }
+  100% { -ms-transform: scale(1); }
+}
+@keyframes beat {
+  0% { transform: scale(0.7); }
+  100% { transform: scale(1); }
+}
+
+
+.#{$fa-css-prefix}-shake {
+  -webkit-animation: shake 150ms infinite linear;
+  -moz-animation: shake 150ms infinite linear;
+  -o-animation: shake 150ms infinite linear;
+  animation: shake 150ms infinite linear;
+}
+
+@-moz-keyframes shake {
+  0% { transform: translate(0px, 0); }
+  30% { transform: translate(2px, 0); }
+  60% { transform: translate(-2px, 0); }
+  100% { transform: translate(0, 0); }
+}
+@-webkit-keyframes shake {
+  0% { -webkit-transform: translate(0, 0); }
+  30% { -webkit-transform: translate(2px, 0);}
+  60% { -webkit-transform: translate(-2px, 0);}
+  100% { -webkit-transform: translate(0, 0); }
+}
+@-o-keyframes shake {
+  0% { -o-transform: translate(0, 0); }
+  30% { -o-transform: translate(2px, 0);}
+  60% { -o-transform: translate(-2px, 0);}
+  100% { -o-transform: translate(0, 0); }
+}
+@-ms-keyframes shake {
+  0% { -ms-transform: translate(0, 0); }
+  30% { -ms-transform: translate(2px, 0); }
+  60% { -ms-transform: translate(-2px, 0); }
+  100% { -ms-transform: translate(0, 0); }
+}
+@keyframes shake {
+  0% { transform: translate(0, 0); }
+  30% { transform: translate(2px, 0); }
+  60% { transform: translate(-2px, 0); }
+  100% { transform: translate(0, 0); }
+}
+
+.#{$fa-css-prefix}-jump {
+  -webkit-animation: jump 500ms infinite ease;
+  -moz-animation: jump 500ms infinite ease;
+  -o-animation: jump 500ms infinite ease;
+  animation: jump 500ms infinite ease;
+}
+
+@-moz-keyframes jump {
+  0% { transform: translate(0, 0px); }
+  100% { transform: translate(0, -2px); }
+}
+@-webkit-keyframes jump {
+  0% { -webkit-transform: translate(0, 0); }
+  100% { -webkit-transform: translate(0, -2px);}
+}
+@-o-keyframes jump {
+  0% { -o-transform: translate(0, 0); }
+  100% { -o-transform: translate(0, -2px);}
+}
+@-ms-keyframes jump {
+  0% { -ms-transform: translate(0, 0); }
+  100% { -ms-transform: translate(0, -2px); }
+}
+@keyframes jump {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(0, -2px); }
+}
+
+
+.#{$fa-css-prefix}-shine {
+  -webkit-animation: shine 1s infinite ease;
+  -moz-animation: shine 1s infinite ease;
+  -o-animation: shine 1s infinite ease;
+  animation: shine 1s infinite ease;
+}
+
+@-moz-keyframes shine {
+  0% { text-shadow:none }
+  100% { text-shadow: -2px -3px 3px #fff, 2px -3px 3px #fff, 1px -3px 3px yellow; }
+}
+@-webkit-keyframes shine {
+  0% { text-shadow:none}
+  100% { text-shadow: -2px -3px 3px #fff, 2px -3px 3px #fff, 1px -3px 3px yellow;}
+}
+@-o-keyframes shine {
+  0% { text-shadow:none}
+  100% { text-shadow: -2px -3px 3px #fff, 2px -3px 3px #fff, 1px -3px 3px yellow;}
+}
+@-ms-keyframes shine {
+  0% { text-shadow:none }
+  100% { text-shadow: -2px -3px 3px #fff, 2px -3px 3px #fff, 1px -3px 3px yellow; }
+}
+@keyframes shine {
+  0% { text-shadow:none }
+  100% { text-shadow: -2px -3px 3px #fff, 2px -3px 3px #fff, 1px -3px 3px yellow;}
+}

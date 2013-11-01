@@ -7988,7 +7988,7 @@ header.header-shrink .center-nav li a {
 /* line 273, ../sass/main.scss */
 .grid li .portfolio-info h3 {
   border-bottom: 1px solid;
-  padding-bottom: 1em;
+  padding-bottom: 0.5em;
 }
 /* line 276, ../sass/main.scss */
 .grid li .portfolio-info h3 i {

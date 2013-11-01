@@ -1,0 +1,396 @@
+/* line 1, ../sass/component.scss */
+.grid {
+  max-width: 69em;
+  list-style: none;
+  margin: 30px auto;
+  padding: 0;
+}
+
+/* line 8, ../sass/component.scss */
+.grid li {
+  display: block;
+  float: left;
+  padding: 7px;
+  width: 33%;
+  opacity: 0;
+}
+
+/* line 18, ../sass/component.scss */
+.grid li.shown,
+.no-js .grid li,
+.no-cssanimations .grid li {
+  opacity: 1;
+}
+
+/* line 23, ../sass/component.scss */
+.grid li a,
+.grid li img {
+  outline: none;
+  border: none;
+  display: block;
+  max-width: 100%;
+}
+
+/* Effect 1: opacity */
+/* line 31, ../sass/component.scss */
+.grid.effect-1 li.animate {
+  -webkit-animation: fadeIn 0.65s ease forwards;
+  -moz-animation: fadeIn 0.65s ease forwards;
+  animation: fadeIn 0.65s ease forwards;
+}
+
+@-webkit-keyframes fadeIn {
+  /* line 38, ../sass/component.scss */
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  /* line 42, ../sass/component.scss */
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  /* line 46, ../sass/component.scss */
+  to {
+    opacity: 1;
+  }
+}
+
+/* Effect 2: Move Up */
+/* line 50, ../sass/component.scss */
+.grid.effect-2 li.animate {
+  -webkit-transform: translateY(200px);
+  -moz-transform: translateY(200px);
+  transform: translateY(200px);
+  -webkit-animation: moveUp 0.65s ease forwards;
+  -moz-animation: moveUp 0.65s ease forwards;
+  animation: moveUp 0.65s ease forwards;
+}
+
+@-webkit-keyframes moveUp {
+  /* line 60, ../sass/component.scss */
+  to {
+    -webkit-transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes moveUp {
+  /* line 64, ../sass/component.scss */
+  to {
+    -moz-transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes moveUp {
+  /* line 68, ../sass/component.scss */
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Effect 3: Scale up */
+/* line 72, ../sass/component.scss */
+.grid.effect-3 li.animate {
+  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  transform: scale(0.6);
+  -webkit-animation: scaleUp 0.65s ease-in-out forwards;
+  -moz-animation: scaleUp 0.65s ease-in-out forwards;
+  animation: scaleUp 0.65s ease-in-out forwards;
+}
+
+@-webkit-keyframes scaleUp {
+  /* line 82, ../sass/component.scss */
+  to {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes scaleUp {
+  /* line 86, ../sass/component.scss */
+  to {
+    -moz-transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  /* line 90, ../sass/component.scss */
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Effect 4: fall perspective */
+/* line 94, ../sass/component.scss */
+.grid.effect-4 {
+  -webkit-perspective: 1300px;
+  -moz-perspective: 1300px;
+  perspective: 1300px;
+}
+
+/* line 100, ../sass/component.scss */
+.grid.effect-4 li.animate {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: translateZ(400px) translateY(300px) rotateX(-90deg);
+  -moz-transform: translateZ(400px) translateY(300px) rotateX(-90deg);
+  transform: translateZ(400px) translateY(300px) rotateX(-90deg);
+  -webkit-animation: fallPerspective .8s ease-in-out forwards;
+  -moz-animation: fallPerspective .8s ease-in-out forwards;
+  animation: fallPerspective .8s ease-in-out forwards;
+}
+
+@-webkit-keyframes fallPerspective {
+  /* line 113, ../sass/component.scss */
+  100% {
+    -webkit-transform: translateZ(0px) translateY(0px) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fallPerspective {
+  /* line 117, ../sass/component.scss */
+  100% {
+    -moz-transform: translateZ(0px) translateY(0px) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes fallPerspective {
+  /* line 121, ../sass/component.scss */
+  100% {
+    transform: translateZ(0px) translateY(0px) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+/* Effect 5: fly (based on http://lab.hakim.se/scroll-effects/ by @hakimel) */
+/* line 125, ../sass/component.scss */
+.grid.effect-5 {
+  -webkit-perspective: 1300px;
+  -moz-perspective: 1300px;
+  perspective: 1300px;
+}
+
+/* line 131, ../sass/component.scss */
+.grid.effect-5 li.animate {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform-origin: 50% 50% -300px;
+  -moz-transform-origin: 50% 50% -300px;
+  transform-origin: 50% 50% -300px;
+  -webkit-transform: rotateX(-180deg);
+  -moz-transform: rotateX(-180deg);
+  transform: rotateX(-180deg);
+  -webkit-animation: fly .8s ease-in-out forwards;
+  -moz-animation: fly .8s ease-in-out forwards;
+  animation: fly .8s ease-in-out forwards;
+}
+
+@-webkit-keyframes fly {
+  /* line 147, ../sass/component.scss */
+  100% {
+    -webkit-transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fly {
+  /* line 151, ../sass/component.scss */
+  100% {
+    -moz-transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes fly {
+  /* line 155, ../sass/component.scss */
+  100% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+/* Effect 6: flip (based on http://lab.hakim.se/scroll-effects/ by @hakimel) */
+/* line 159, ../sass/component.scss */
+.grid.effect-6 {
+  -webkit-perspective: 1300px;
+  -moz-perspective: 1300px;
+  perspective: 1300px;
+}
+
+/* line 165, ../sass/component.scss */
+.grid.effect-6 li.animate {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform-origin: 0% 0%;
+  -moz-transform-origin: 0% 0%;
+  transform-origin: 0% 0%;
+  -webkit-transform: rotateX(-80deg);
+  -moz-transform: rotateX(-80deg);
+  transform: rotateX(-80deg);
+  -webkit-animation: flip .8s ease-in-out forwards;
+  -moz-animation: flip .8s ease-in-out forwards;
+  animation: flip .8s ease-in-out forwards;
+}
+
+@-webkit-keyframes flip {
+  /* line 181, ../sass/component.scss */
+  100% {
+    -webkit-transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes flip {
+  /* line 185, ../sass/component.scss */
+  100% {
+    -moz-transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes flip {
+  /* line 189, ../sass/component.scss */
+  100% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+/* Effect 7: helix (based on http://lab.hakim.se/scroll-effects/ by @hakimel) */
+/* line 193, ../sass/component.scss */
+.grid.effect-7 {
+  -webkit-perspective: 1300px;
+  -moz-perspective: 1300px;
+  perspective: 1300px;
+}
+
+/* line 199, ../sass/component.scss */
+.grid.effect-7 li.animate {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  -webkit-animation: helix .8s ease-in-out forwards;
+  -moz-animation: helix .8s ease-in-out forwards;
+  animation: helix .8s ease-in-out forwards;
+}
+
+@-webkit-keyframes helix {
+  /* line 212, ../sass/component.scss */
+  100% {
+    -webkit-transform: rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes helix {
+  /* line 216, ../sass/component.scss */
+  100% {
+    -moz-transform: rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes helix {
+  /* line 220, ../sass/component.scss */
+  100% {
+    transform: rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+/* Effect 8:  */
+/* line 224, ../sass/component.scss */
+.grid.effect-8 {
+  -webkit-perspective: 1300px;
+  -moz-perspective: 1300px;
+  perspective: 1300px;
+}
+
+/* line 230, ../sass/component.scss */
+.grid.effect-8 li.animate {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: scale(0.4);
+  -moz-transform: scale(0.4);
+  transform: scale(0.4);
+  -webkit-animation: popUp .8s ease-in forwards;
+  -moz-animation: popUp .8s ease-in forwards;
+  animation: popUp .8s ease-in forwards;
+}
+
+@-webkit-keyframes popUp {
+  /* line 243, ../sass/component.scss */
+  70% {
+    -webkit-transform: scale(1.1);
+    opacity: .8;
+    -webkit-animation-timing-function: ease-out;
+  }
+
+  /* line 244, ../sass/component.scss */
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes popUp {
+  /* line 248, ../sass/component.scss */
+  70% {
+    -moz-transform: scale(1.1);
+    opacity: .8;
+    -moz-animation-timing-function: ease-out;
+  }
+
+  /* line 249, ../sass/component.scss */
+  100% {
+    -moz-transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes popUp {
+  /* line 253, ../sass/component.scss */
+  70% {
+    transform: scale(1.1);
+    opacity: .8;
+    animation-timing-function: ease-out;
+  }
+
+  /* line 254, ../sass/component.scss */
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  /* line 258, ../sass/component.scss */
+  .grid li {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 400px) {
+  /* line 264, ../sass/component.scss */
+  .grid li {
+    width: 100%;
+  }
+}

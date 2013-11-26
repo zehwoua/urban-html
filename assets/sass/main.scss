@@ -7,7 +7,6 @@ $subnav-color: #a0a0a0;
 $portfolio-size:25%;
 $portfolio-size-double:50%;
 
-
 body{
 	font-size: 12px;
 	font-family: 'Open Sans', sans-serif;
@@ -142,10 +141,6 @@ header{
 }
 
 /************************* PORTFOLIO ********************************/
-.portfolios{
-	
-}
-
 .grid {
 	max-width: 100%;
 	list-style: none;
@@ -168,8 +163,8 @@ header{
 				left: 0;
 				width: 100%;
 				color: white;
-				padding: 0.5em 1em;
-				height: 60px;
+				padding: 1em;
+				height: 100%;
 				@include transition(all, 0.3s, ease-in-out);
 				a{
 					color: white;
@@ -180,12 +175,11 @@ header{
 				border: none;
 				display: block;
 				width: 100%;
-				filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
-				-webkit-filter: grayscale(100%) saturate(0);
-				-moz-filter: grayscale(100%) saturate(0);
-				-o-filter: grayscale(100%) saturate(0);
-				-ms-filter: grayscale(100%) saturate(0); 
-				filter: grayscale(100%) saturate(0);
+				-webkit-filter: grayscale(0%) saturate(2.1);
+				-moz-filter: grayscale(0%) saturate(2.1);
+				-o-filter: grayscale(0%) saturate(2.1);
+				-ms-filter: grayscale(0%) saturate(2.1); 
+				filter: grayscale(0%) saturate(2.1);
 				@include transition(all, 0.5s, ease-in-out);
 				-webkit-backface-visibility: hidden !important; /*THIS IS IMPORTANT*/ 
 			}
@@ -202,7 +196,7 @@ header{
 			-webkit-backface-visibility: hidden !important; /*THIS IS IMPORTANT*/ 
 			position: relative;
 			overflow: hidden;
-			padding-bottom: 60px;
+			height: 150px;
 			a{
 				@include transition(all, 0.5s, ease-in-out);
 				&:hover{
@@ -211,13 +205,13 @@ header{
 			}
 			i.info-bg-icon{
 				position: absolute;
-				right: -11px;
-				bottom:-13px;
-				font-size: 70px;
+				right: 15px;
+				bottom: 5px;
+				font-size: 50px;
 			}
 			&.news-section{
 				background-color:#b7dfbc;
-				h3,a{
+				a{
 					color: #14A526;
 				}
 				i.info-bg-icon{
@@ -227,17 +221,22 @@ header{
 			&.ideas-section,
 			&.inspired-section{
 				background-color: #e0bdc3;
-				h3,a{
+				a{
 					color: #BD2D46;
 				}
 				i.info-bg-icon{
 					color: #baa5a4;
 				}
 			}
+			&.ideas-section,
+			&.mixes-section,
+			&.subscribe-section{
+				padding-bottom: 60px;
+			}
 			&.calendar-section,
 			&.subscribe-section{
 				background-color: #cbe0ff;
-				h3,a{
+				a{
 					color: #5480c2;
 				}
 				i.info-bg-icon{
@@ -246,7 +245,6 @@ header{
 			}
 			&.subscribe-section{
 				padding-bottom: 0;
-				min-height: 183px;
 				form{
 					position: absolute;
 					width: 90%;
@@ -255,7 +253,7 @@ header{
 						background: none;
 						outline: none;
 						border: none;
-						border-bottom: 1px solid #5480c2;
+						border-bottom: 1px solid #fff;
 						width: 85%;
 					}
 					button{
@@ -269,7 +267,7 @@ header{
 			}
 			&.mixes-section{
 				background-color: #e0e3c4;
-				h3,a{
+				a{
 					color: #989E5D;
 				}
 				i.info-bg-icon{
@@ -277,15 +275,12 @@ header{
 				}
 			}
 			h3{
-				border-bottom: 1px solid;
 				padding-bottom: 0.5em;
 				i{
 					-webkit-animation-play-state: paused;
 				}
 			}
 			.see-all{
-				padding-top: 1em;
-				border-top: 1px solid;
 				margin-top: 1em;
 				margin-bottom: 0;
 				text-align: right;
@@ -297,7 +292,7 @@ header{
 				-ms-filter: grayscale(0%); 
 				filter: grayscale(0%);
 				h3>i{
-						-webkit-animation-play-state: running;
+					-webkit-animation-play-state: running;
 				}
 			}
 		}
@@ -312,29 +307,63 @@ header{
 		&:hover{
 			cursor: pointer;
 			img{
+				filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+				-webkit-filter: grayscale(100%) saturate(0);
+				-moz-filter: grayscale(100%) saturate(0);
+				-o-filter: grayscale(100%) saturate(0);
+				-ms-filter: grayscale(100%) saturate(0); 
+				filter: grayscale(100%) saturate(0);
+			}
+			.portfolio{
+				.portfolio-info{
+					top: 0px;
+				}
+			}
+		}
+		&.w2{
+			width: $portfolio-size-double;
+		}
+		&.ht2{
+			height: 320px !important;
+			.portfolio,.portfolio img{
+				height: 310px !important;
+			}
+		}
+	}
+}
+
+.portfolios{
+	.grid >li {
+		.portfolio img{
+			filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+			-webkit-filter: grayscale(100%) saturate(0);
+			-moz-filter: grayscale(100%) saturate(0);
+			-o-filter: grayscale(100%) saturate(0);
+			-ms-filter: grayscale(100%) saturate(0); 
+			filter: grayscale(100%) saturate(0);
+		}
+		&:hover{
+			.portfolio img{
 				-webkit-filter: grayscale(0%) saturate(2.1);
 				-moz-filter: grayscale(0%) saturate(2.1);
 				-o-filter: grayscale(0%) saturate(2.1);
 				-ms-filter: grayscale(0%) saturate(2.1); 
 				filter: grayscale(0%) saturate(2.1);
 			}
-			.portfolio{
-				.portfolio-info{
-					margin-top: -60px;
-				}
-			}
-		}
-		&.w2{
-			width: $portfolio-size-double;
-			height: 386px;
-			img{
-				height: 376px;
-			}
-		}
-		&.h2{
-			/*height: 386px;*/
 		}
 	}
+}
+.home{
+
+	.grid >li{
+		height: 160px;
+		.portfolio, .portfolio img{
+			height: 150px;
+		}
+		&.news{
+			height: 160px;
+		}
+	} 
 }
 
 .grid li.shown,
@@ -393,6 +422,24 @@ header{
 	}
 }
 
+/************************* BLOG ********************************/
+
+.blog{
+	.blog-list{
+		margin-bottom: 1px solid #525252;
+		.blog-thumb{
+			img{
+				max-width: 100%;
+			}
+		}
+		.blog-description{
+			h2{
+				text-transform: uppercase;
+				margin-bottom: 1em;
+			}
+		}
+	}
+}
 /************************* SOCIAL ********************************/
 
 .portfolio-social{
@@ -519,6 +566,17 @@ header{
 			left: 0;
 		}
 	}
+}
+#main.home{
+	.grid{
+		.gallery{
+			background: none;
+			.portfolio .portfolio-info{
+				text-align: left;
+			}
+		}
+	}
+	
 }
 .pagination {
   	position: absolute;

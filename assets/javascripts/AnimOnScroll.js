@@ -98,7 +98,13 @@
 				// initialize masonry
 				new Masonry( self.el, {
 					itemSelector: 'li',
-					transitionDuration : 0
+            		animate: true,
+            		transitionDuration : 0,
+            		animationOptions: {
+		                duration: 500,
+		                easing: 'easeInOutCirc',
+		                queue: false
+		            }
 				} );
 				
 				if( Modernizr.cssanimations ) {

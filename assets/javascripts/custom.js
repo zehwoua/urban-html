@@ -11,6 +11,7 @@ $(document).ready(function(){
 
 	portfolio_gallery();
 	portfolio_fancybox();
+
 	$('.portfolio-social-button').click(function(e){
 		e.preventDefault();
 		element = $(this);
@@ -37,14 +38,24 @@ $(document).ready(function(){
 
 });
 
+// function home_slider(){
+// 	var mySwiper = new Swiper('.swiper-container',{
+// 	    pagination: '.pagination',
+// 	    loop:true,
+// 	    autoplay:5000,
+// 	    grabCursor: true,
+// 	});
+// }
+
 function portfolio_gallery(){
 	if($(".swiper-container").length != 0){
 		var mySwiper = new Swiper('.swiper-container',{
 	    pagination: '.pagination',
 	    loop:true,
+	    autoplay:5000,
 	    grabCursor: true,
 	    paginationClickable: true
-	  })
+	  });
 	  $('.arrow-left').on('click', function(e){
 	    e.preventDefault()
 	    mySwiper.swipePrev()
